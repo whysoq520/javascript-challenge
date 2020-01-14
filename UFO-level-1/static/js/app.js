@@ -3,20 +3,24 @@ var tableData = data;
 
 // YOUR CODE HERE!
 var input = d3.select("#datetime");
-var tablebody = d3.select("tbody");
+var button =d3.select("button")
+var tbody = d3.select("tbody");
 //var inputValue = input.property("value")
 input.on("change", function() {
     var inputValue = d3.event.target.value;
-    console.log(inputValue);
-    var filteredData= tableData.filter( UFO =>UFO.datetime===inputValue)
-    console.log(filteredData)
-});
-
-
-filteredData.forEach((report) => {
-    var row = tablebody.append("tr");
-    Object.entries(report).forEach(([key, value]) =>{
-        var cell = row.append("td");
-        cell.text(value);
+    //console.log(inputValue);
+    var filterdata = tableData.filter( UFO => UFO.datetime ==inputValue);
+    
+    button.on ("click", function() {
+       
+    filterdata.forEach((data) =>{
+        var row = tbody.append("tr");
+        row.text(" ")
+        
+        //Object.values(data).forEach(value =>console.log(value));
+        Object.values(data).forEach(value =>{
+            row.append("td").text(value);
+        });
     });
+ });
 });
