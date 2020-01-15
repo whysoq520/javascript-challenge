@@ -10,3 +10,23 @@ var inputcountry = d3.select("#country");
 var inputshape = d3.select("#shape");
 var inputduration = d3.select("duration");
 var button = d3.select("buttton");
+
+
+inputdate.on("change", function() {
+    var inputValue = d3.event.target.value;
+    console.log(inputValue);
+//     var filterdate = tableData.filter( UFO => UFO.datetime ==inputdate);
+    
+//     button.on ("click", function() {
+       
+//     filterdata.forEach((data) =>{
+//         var row = tbody.append("tr");
+//         row.text(" ")
+        
+//         //Object.values(data).forEach(value =>console.log(value));
+//         Object.values(data).forEach(value =>{
+//             row.append("td").text(value);
+//         });
+//     });
+//  });
+});
