@@ -8,8 +8,8 @@ var tbody = d3.select("tbody");
 //var inputValue = input.property("value")
 input.on("change", function() {
     var inputValue = d3.event.target.value;
-    //console.log(inputValue);
-    var filterdata = tableData.filter( UFO => UFO.dxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxatetime ==inputValue);
+    console.log(inputValue);
+    var filterdata = tableData.filter( UFO => UFO.datetime ==inputValue);
     
     button.on ("click", function() {
        
