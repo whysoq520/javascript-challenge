@@ -2,8 +2,7 @@
 var tableData = data;
 
 // YOUR CODE HERE!
-var input = d3.select("#datetime");
-var button =d3.select("button")
+
 var tbody = d3.select("tbody");
 
 // build funtion to biuld the table
@@ -21,10 +20,9 @@ function builtTable(data) {
     });
     };
 
-builtTable(tableData);
-
-
-//var inputValue = input.property("value")
+// build table after filtered data
+var input = d3.select("#datetime");
+var button =d3.select("button");
 input.on("change", function() {
     var inputValue = d3.event.target.value;
    // console.log(inputValue);
@@ -36,3 +34,4 @@ input.on("change", function() {
     
  });
 });
+builtTable(tableData);
